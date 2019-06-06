@@ -7,9 +7,11 @@ const jwt = require('jsonwebtoken');
 
 
 const Users = require('../models/user.model');
+    router.get('/', (req, res) => {
+        res.redirect("/");
+    });
 
-
-router.post('/Login', (req, res) => {
+    router.post('/Login', (req, res) => {
     const Username = req.body.username;
     const pwrd = req.body.password;
 
