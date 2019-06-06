@@ -19,7 +19,7 @@ export default class JobList extends Component {
     }
 
     componentDidMount() {
-        axios.post("http://localhost:8080/",{
+        axios.post("https://examframe.herokuapp.com/",{
             filters: this.state.filters
         })
             .then( res => {
@@ -36,7 +36,7 @@ export default class JobList extends Component {
 
     getFilters(filters){
         this.setState({filters: filters}, function(){
-            axios.post("http://localhost:8080/get-filtered-jobs", { filters: this.state.filters})
+            axios.post("https://examframe.herokuapp.com/get-filtered-jobs", { filters: this.state.filters})
                 .then(res => {
                     this.setState({jobs: res.data })
                 })

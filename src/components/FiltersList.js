@@ -22,7 +22,7 @@ export default class FiltersList extends Component {
     }
 
     componentDidMount() {
-        axios.post("http://localhost:8080/get-filters")
+        axios.post("https://examframe.herokuapp.com/get-filters")
             .then( res => {
                 this.setState({
                     jobs: res.data

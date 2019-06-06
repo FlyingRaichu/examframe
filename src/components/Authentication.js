@@ -2,7 +2,7 @@ import jwtDecode from 'jwt-decode';
 class Authentication {
 
     constructor() {
-        this.apiUrl = 'http://localhost:8080/';
+        this.apiUrl = 'https://examframe.herokuapp.com/';
 
         this.Login = this.Login.bind(this);
         this.fetch = this.fetch.bind(this);

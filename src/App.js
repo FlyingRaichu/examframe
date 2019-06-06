@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.post("http://localhost:8080/")
+    axios.post("https://examframe.herokuapp.com/")
         .then( res => {
           this.setState({
             data: res.data

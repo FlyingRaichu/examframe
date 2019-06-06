@@ -26,7 +26,7 @@ export default class NewJob extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        axios.post('http://localhost:8080/add-job', {
+        axios.post('https://examframe.herokuapp.com/add-job', {
             title: this.state.title,
             description: this.state.description,
             category: this.state.category,

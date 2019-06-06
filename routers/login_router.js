@@ -8,20 +8,6 @@ const jwt = require('jsonwebtoken');
 
 const Users = require('../models/user.model');
 
-// router.post('/register', (req, res) => {
-//     crypt.hash(req.body.password, 10,function(err, hash){
-//         if(err){ console.log(err)}
-//
-//         let nUser = new Users({
-//             username: req.body.username,
-//             password: hash,
-//         });
-//
-//         nUser
-//             .save()
-//             .then(answer => res.json(answer));
-//     })
-// });
 
 router.post('/Login', (req, res) => {
     const Username = req.body.username;
