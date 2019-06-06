@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = (process.env.PORT || 8080);
+const path = require("path")
+const path = require("path")
 
 require('dotenv').config();
 console.log(require('dotenv').config());
@@ -25,6 +27,9 @@ app.use((req, res, next) => {
         next();
     }
 });
+
+app.use('/', express.static(path.join(__dirname, 'build')));
+
 
 /*** Database ***/
 mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true});
@@ -63,10 +68,6 @@ app.post('/', (req, res) => {
     jobs.find()
             .then(jobs => res.json(jobs))
 
-});
-
-app.get('/', (req, res) => {
-    res.send('Success');
 });
 
 app.get('/add-job', eJwt({secret: process.env.JWT_SECRET}), (req, res) => {
