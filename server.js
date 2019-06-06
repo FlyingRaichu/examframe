@@ -91,6 +91,9 @@ app.post('/add-job', (req, res) => {
 let loginRouter = require('./routers/login_router');
 app.use('/users', loginRouter);
 
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
 
 
 app.use((err, req, res, next) => {
