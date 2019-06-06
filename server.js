@@ -99,6 +99,6 @@ app.get("*", (req, res) => {
 app.use((err, req, res, next) => {
     console.log("Error status: " + err.status);
     if (err.status == 401) {
-        res.redirect('/users/Login');
+        res.redirect('/');
     }
 });
