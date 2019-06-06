@@ -33,7 +33,7 @@ export default class NewJob extends Component {
             area: this.state.area
         });
 
-        this.props.history.push("/");
+        this.props.history.push("https://examframe.herokuapp.com/");
         window.location.reload()
     }
 
