@@ -65,7 +65,9 @@ app.post('/', (req, res) => {
 
 });
 
-
+app.get('/', (req, res) => {
+    res.send('Success');
+});
 
 app.get('/add-job', eJwt({secret: process.env.JWT_SECRET}), (req, res) => {
     res.send('Access granted');
